@@ -1,0 +1,228 @@
+body {
+    background-color: #000;
+  text-align: center;
+}
+
+#confetti-holder {
+  position: absolute;
+  top: 20px;
+  left: -00px;
+  z-index: 99;
+  width: 300px;
+  width: 900px;
+  height: 700px;
+}
+
+#wrapper {
+  perspective: 700px;
+  perspective-origin: 50% 50%;
+}
+
+.card { 
+  background-color: #FFF;
+  position: relative;
+  margin: 100px auto;
+  width: 320px;
+  height: 440px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1.0s cubic-bezier(0,.75,.25,1);
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.side1, .side2 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfGNpX3ONIY3Ctcc7c79FvIe_8eVOxomAxQEuC2DXCf6z9FM2D');
+  background-size: 310px;
+  background-color: #d48585;
+}
+
+.side2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: rotateY(180deg);
+  background-color: #FFF;
+}
+
+.inside {
+  background-color: #FFF;
+  width: 84%;
+  height: 90%;
+  top: 6%;
+  left: 8%;
+  bottom: 6%;
+  right: 7%;
+  position: relative;
+}
+
+.std {
+  position: relative;
+  /* top: 100px; */
+  top: 40px;
+  margin: 0 auto;
+  width: 240px;
+  font-family: "Dancing Script";
+  font-weight: 100;
+  font-size: 42px;
+  color: #d48585;
+}
+
+.side1 p.std {
+  color: #96979b !important;
+}
+
+.side2 p.std{
+  top: 30px !important;
+}
+
+.side2 p.names {
+  position: relative;
+  top: -350px;
+  font-size: 28px;
+}
+
+.side2 select {
+  margin-top: 60px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.names {
+  /* margin-top: 160px; */
+  margin-top: 180px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size:33px;
+  font-weight:300;
+  color: #d48585;
+  /* color: #FFF; */
+  text-align:center;
+  position: relative;
+}
+
+.small {
+  font-family: 'Tangerine';
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto;
+  color: #96979b;
+  top: 60px;
+  position: relative;
+}
+
+.guess {
+  font-family: 'Alegreya Sans SC';
+  margin-top: 60px;
+  color: #d48585;
+  font-size: 24px;
+  display: none;
+}
+
+#final, #flip {
+  display: block;
+  margin: 0 auto;
+  padding: 6px;
+  background-color: #d48585;
+  border-radius: 13px;
+  border-width: 0;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#final {
+  display: none;
+  position: relative;
+  top: 54px;
+}
+
+#final:active{
+   background-color: #a66868;
+}
+
+#prize {
+  margin-top: 100px;
+  font-size: 16px;
+}
+
+#wrap {
+    /* border: 1px solid red; */
+    position: relative;
+    top: 0px;
+}
+
+/* *********************** */
+@keyframes heartbeat {
+    30% {
+        transform: scale( 1.7 )
+                   rotate(-45deg);
+    }
+    50% {
+        transform: scale( 1.5 ) 
+                   translateX(5%) 
+                   translateY(5%)
+                   rotate(-45deg);
+    } 
+    70% {
+        transform: scale( 1.0 ) 
+                   translateX(5%) 
+                   translateY(5%)
+                   rotate(-45deg);
+    }
+}
+
+.heart {
+    --heart-size: 30px;
+    background-color: red;
+    display: inline-block;
+    height: var(--heart-size);
+    margin: 0 10px;
+    position: relative;
+    transform: rotate(-45deg);
+    position: absolute; 
+    left: 103px;
+    top: 150px;
+    /* top: 13%; */
+    width: var(--heart-size);
+    animation: heartbeat 1s 3 linear;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: var(--heart-size);
+    position: absolute;
+    width: var(--heart-size);
+}
+
+.heart:before {
+    top: calc(var(--heart-size) / -2);
+    left: 0;
+}
+
+.heart:after {
+    left: calc(var(--heart-size) / 2);
+    top: 0;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+    }
+
+    to {
+        margin-left: 100%;
+    }
+}
+
+#loading {
+  display: none;
+}

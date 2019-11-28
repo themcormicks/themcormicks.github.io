@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,100italic|Tangerine:400,700|Dancing+Script|Material+Icons">
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section id="wrapper">
+      <div class="card">
+        <div class="face side1">
+            <div class="inside">
+                <div id="wrap">
+                    <p class="std">Congratulations</p>
+                    <p class="heart"></p>
+                    <p class="heart heart2"></p>
+            <p class="names">Mr & Mrs McCormick</p>
+            <button id="flip">(tap to select your prize)</button>
+            </div>
+          </div>
+        </div>
+        <div class="face side2">
+          <div class="inside">
+            <p class="std">Select a Prize</p>
+            <select id="prize">
+              <option id="none"></option>
+              <option value="0">Fine dining</option>
+              <option value="1">Hot air baloon</option>
+              <option value="2">Skydiving</option>
+              <option value="3">A Hot lap</option>
+              <option value="4">A new puppy</option>
+              <option value="5">A new kitten</option>
+              <option value="cash">Cash</option>
+            </select>
+            <br />
+            <p class="guess"></p>
+            <button id="final">Make it so</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.15/dist/index.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.4.0/dist/confetti.browser.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+ </html>
