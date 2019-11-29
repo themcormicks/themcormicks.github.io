@@ -26,8 +26,8 @@ $("#flip").click(function(event) {
     return;
   }
 
-  $(".card").css("transform", "rotateY(180deg)");
-  $(".card").css("transition", "all 1s cubic-bezier (0, .75, .25, 1)");
+$(".card").css("transform", "rotateY(180deg)");
+$(".card").css("transition", "all 1s cubic-bezier (0, .75, .25, 1)");
 
   // $("#confetti-holder").remove();
   flipped = true;

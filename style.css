@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+  background-color: #FFF;
   text-align: center;
 }
 
@@ -19,8 +19,6 @@ body {
 }
 
 .card { 
-  background-color: #FFF;
-  position: relative;
   margin: 100px auto;
   width: 320px;
   height: 440px;
@@ -106,16 +104,6 @@ body {
   position: relative;
 }
 
-.small {
-  font-family: 'Tangerine';
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 auto;
-  color: #96979b;
-  top: 60px;
-  position: relative;
-}
-
 .guess {
   font-family: 'Alegreya Sans SC';
   margin-top: 60px;
@@ -152,7 +140,6 @@ body {
 }
 
 #wrap {
-    /* border: 1px solid red; */
     position: relative;
     top: 0px;
 }
@@ -211,18 +198,4 @@ body {
 .heart:after {
     left: calc(var(--heart-size) / 2);
     top: 0;
-}
-
-@keyframes slidein {
-    from {
-        margin-left: 50%;
-    }
-
-    to {
-        margin-left: 100%;
-    }
-}
-
-#loading {
-  display: none;
 }
